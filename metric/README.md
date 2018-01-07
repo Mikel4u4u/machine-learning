@@ -10,7 +10,7 @@
 
 ### Евклидово расстояние
 
-$r(u, v) = (\sum_{i=1}^{n} {|u_i - v_i|}^{2})^{1/2}$
+![](https://latex.codecogs.com/svg.latex?%5Cfn_phv%20%5Crho%28u%2C%20v%29%20%3D%20%28%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20%7B%7Cu_i%20-%20v_i%7C%7D%5E%7B2%7D%29%5E%7B1/2%7D)
 
 ```R
 euclideanDistance <- function(u, v) {
@@ -48,10 +48,14 @@ kNN(train = trainIris, test = testIris, cl = trainIris$Species, k = 3)
 ---
 
 ## Алгоритм	k взвешенных	ближайших	соседей	– **kwNN**
-
+ 
 ### Критерий	скользящего	контроля	LOO для kwNN
 
+![LOO kNN](graphics/LOOkwnn.png)
+
 ### Карта	классификации	kwNN
+
+![kNN](graphics/kwNN.png)
 ---
 
 ## Сравнение	качества	алгоритмов	kNN и	kwNN.
