@@ -43,6 +43,8 @@ kNN(train = trainIris, test = testIris, cl = trainIris$Species, k = 3)
 ![LOO kNN](graphics/LOOknn.png)
 
 ### Карта	классификации kNN
+
+![kNN](graphics/kNN.png)
 ---
 
 ## Алгоритм	k взвешенных	ближайших	соседей	– **kwNN**

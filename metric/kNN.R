@@ -39,7 +39,7 @@ LOO <- function(xl) {
   
   loo <- loo/n
 }
-
+  
 drawLOO <- function(xl) {
   n <- nrow(xl)
   maxk <- 20
@@ -59,4 +59,24 @@ drawLOO <- function(xl) {
   text(bestK, loo[bestK], paste("k=", bestK), col = 'black', pos=3)
 }
 
+# картa	классификации
+drawKNN <- function(train, classes, colors) {
+  plot(train, pch = 21, bg = colors[classes], col = colors[classes], asp = 1)
+  
+  step <- 0.1
+  ox <- seq(0, 7, step)
+  oy <-seq(0, 3, step)
+  
+  test <- expand.grid(Petal.Length = ox, Petal.Width = oy)
+  
+  prediction <- kNN(train, test, classes, k = 6)
+  
+  points(test, pch = 21, col = colors[prediction], asp = 1)
+}
+
+trainIris <- iris[, 3:4]
+classes <- iris$Species
+colors <- c("setosa" = "red", "versicolor" = "green3", "virginica" = "blue")
+
+drawKNN(trainIris, classes, colors)
 drawLOO(iris)
