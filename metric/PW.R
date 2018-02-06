@@ -58,11 +58,11 @@ drawLOO <- function(xl) {
   points(bestH, loo[bestH], col = 'green3', bg = 'green3', asp = 1, pch = 21)
   
   legend( x="topright", 
-          legend=c("Скользящий контроль","оптимальное k"), 
+          legend=c("Скользящий контроль","оптимальное h"), 
           col=c("red","green3"), bg=c(NA, 'green3'), lwd=2, lty=c(1,NA), 
           pch=c(NA,19), merge=FALSE, cex=0.8 )
   
-  text(bestH, loo[bestH], paste("k=", bestH), col = 'black', pos=3)
+  text(bestH, loo[bestH], paste("h=", bestH), col = 'black', pos=3)
 }
 
 # картa	классификации
